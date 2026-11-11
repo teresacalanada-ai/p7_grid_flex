@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --color-lime: #ccff02 ;
+            --color-storm: #8696a8 ;
+            --color-violet: #e4d2fc ;
+            --color-chili: #ef432b ;
+            --color-dark: #282625 ;
+            --color-light: #efeae8 ;
+            --color-forest: #325444 ;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--color-dark);
+        }
+
+        .contenido_grid {
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            border: solid 1px white;
+            margin: 3em;
+        }
+
+        .contenido_grid > div {
+            padding: 10px;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        .div_lime {
+            grid-column-start: 1 ;
+            grid-row: 1 / 3 ;
+            background-color: var(--color-lime);
+            color: var(--color-dark);
+        }
+
+        .div_storm {
+            grid-column-start: 1 ;
+            grid-row: 3 /  5 ;
+            background-color: var(--color-storm);
+            color: var(--color-light);
+        }
+
+        .div_violet {
+            grid-column-start: 1;
+            grid-row: 5 / 7;
+            background-color: var(--color-violet);
+            color: var(--color-chili);
+        }
+
+        .div_chilli {
+            grid-column-start: 1;
+            grid-row: 7 / 9 ;
+            background-color: var(--color-chili);
+            color: var(--color-light);
+        }
+
+         .div_dark {
+            grid-column-start: 2;
+            grid-row: 1 / 4 ;
+            background-color: var(--color-dark);
+            color: var(--color-light);
+        }
+
+        .div_light {
+            grid-column-start: 2;
+            grid-row: 4 / 9 ;
+            background-color: var(--color-light);
+            color: var(--color-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+        }
+
+        .div_forest {
+            grid-column-start: 3;
+            grid-row: 1 / 9 ;
+            background-color: var(--color-forest);
+            color: var(--color-light);
+            display: flex;
+            justify-content:space-between;
+        }
+
+        .div_forest > h1 {
+            writing-mode: vertical-rl;
+        }
+
+        h1 {
+            font-size: 4em;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <article class="contenido_grid">
+        <div class="div_lime">
+            <p>#ccff02</p>
+            <h1>LIME</h1>
+        </div>
+
+        <div class="div_storm">
+            <p>#8696a8</p>
+            <h1>STORM</h1>
+        </div>
+
+        <div class="div_violet">
+            <p>#e4d2fc</p>
+            <h1>VIOLET</h1>
+        </div>
+
+        <div class="div_chilli">
+            <p>#ef432b</p>
+            <h1>CHILLI</h1>
+        </div>
+
+        <div class="div_dark">
+            <p>#282625</p>
+            <h1>DARK</h1>
+        </div>
+
+        <div class="div_light">
+            <p>#efeae8</p>
+            <hgroup>
+                <h1>LIGHT&</h1>
+                <h1>BRIGHT</h1>
+            </hgroup>
+
+        </div>
+
+        <div class="div_forest">
+            <p>#325444</p>
+            <h1>FOREST</h1>
+        </div>
+
+    </article>
+</body>
+</html>
